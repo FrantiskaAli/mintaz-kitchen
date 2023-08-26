@@ -2,26 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#main-figure {
+  background-image: url("../../public/kebabs.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden !important;
+  background-size: cover;
+  -webkit-animation: zoomIn 60s;
+  animation: zoomIn 60s;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+ 
+
+}
+.map-container {
+  width: 50%;
+  height: 400px;
+}
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: scroll 15s linear infinite;
+  -webkit-animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes scroll {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes scroll {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scroll {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
-}
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }}
+/*main pic animation*/
+@keyframes zoomIn {
+  0% {
+      transform:scale(1) rotate(0);
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  50% {
+      transform: scale(3) rotate(0.2turn);
+      
+  }
+  100% {
+      transform:scale(1);
+  }
+
 }
