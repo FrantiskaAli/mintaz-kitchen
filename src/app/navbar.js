@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link';
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 
 export default function (){
 //scroll function
@@ -43,13 +44,13 @@ const [scrollTop, setScrollTop] = useState(0);
     
         return(
 
-         <nav className={scrollTop > 20 ? "flex min-w-screen p-12 justify-center bg-gray-200 text-white sticky top-0 z-10" : "flex min-w-screen p-12 justify-center bg-black text-white z-10 sticky top-0"} >
+         <nav className={scrollTop > 100 ? "flex min-w-screen p-10 justify-center bg-gray-200/[.4] text-orange-200 sticky top-0 z-10" : "flex min-w-screen p-10 justify-center bg-black text-white z-10 sticky top-0"} >
             {/*desktop navigation*/}
-      
+            <Image src="/logo.jpg" width={100} height={100} className='absolute top-10 left-10'/>
 
            { nav.display ?
            
-           <ul className= "flex  h-auto w-2/5 justify-between" >
+           <ul className= "flex  h-auto w-2/5 justify-between uppercase" >
            <li> <Link href="/" className="text-white">Home</Link> </li>
            <li><Link href="/menu">Menu</Link> </li>
            <li><Link href="/contact">Contact Us</Link> </li>
