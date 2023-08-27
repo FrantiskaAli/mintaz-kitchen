@@ -37,17 +37,17 @@ export default function Reviews (){
     }
     //setInterval(handleClickForward,10000)
 return(
-    <section>
-            <article onClick={()=>handleClickBack()}>
-                sipka
+    <section className="flex md:flex-row flex-col justify-between  md:p-20 bg-orange-100 text-gray-950 ">
+            <article onClick={()=>handleClickBack()} className="flex items-center hover:cursor-pointer text-9xl">
+            &#8637;
             </article>
-            <article>
-                <h3>{reviews[review].text}</h3>
-                <p>{reviews[review].name}</p>
+            <article className="md:p-20 p-10">
+                <h3 className="text-2xl font-serif font-medium pb-10">&#34;{reviews[review].text}&#34;</h3>
+                <p className="text-right text-xl font-bold">{reviews[review].name}</p>
                 <p>{reviews[review].stars}</p>
             </article>
-            <article onClick={()=>handleClickForward()}>
-                sipka
+            <article onClick={()=>handleClickForward()} className="flex items-center hover:cursor-pointer text-9xl justify-end">
+            &#8640;
             </article>
     </section>
 )
