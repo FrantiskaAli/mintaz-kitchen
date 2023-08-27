@@ -1,9 +1,9 @@
 'use client'
-import Dishes from "./main-components/dishes"
-import Reviews from "./main-components/reviews";
+import Dishes from "./dishes"
+import Reviews from "./reviews";
 import dynamic from 'next/dynamic';
-import Map from "./main-components/map";
 
+const Map= dynamic(() => import('./map'), { ssr: false });
 // Define the Home component
 export default function Home() {
  
