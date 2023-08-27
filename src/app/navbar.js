@@ -47,7 +47,7 @@ export default function () {
 
         <nav className={scrollTop > 100 ? "flex min-w-screen p-6 justify-center bg-orange-100/[.8] sticky top-0 z-20 border-b-4 border-solid border-orange-200 font-bold font-serif text-gray-700 shadow-md" : "flex min-w-screen p-6 justify-center bg-gray-950 font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
             {/*desktop navigation*/}
-            <Image src="/logo.jpg" width={100} height={100} className='absolute top-6 left-10' />
+            <Image src="/logo.jpg" width={100} height={100} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10git'} />
 
             {nav.display ?
 
