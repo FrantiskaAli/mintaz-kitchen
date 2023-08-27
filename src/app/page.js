@@ -25,14 +25,14 @@ export default function Home() {
             <p id="scroll-text">Just opened now | blah blah | blah blah</p>
           </section>
           </article>
-          <p className="md:px-40 px-10 font-medium text-xl">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, </p>
+          <p className="md:px-40 px-10 font-medium md:text-xl text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium  accusantium doloremque laudantium </p>
         </article>
         </figcaption>
       </section>
    
       </article>
       <section className="flex w-full p-8 bg-orange-100 ">
-        <h2 className=" text-gray-950 text-5xl font-serif font-bold">Our top picks</h2>
+        <h2 className=" text-gray-950 md:text-5xl text-3xl font-serif font-bold">Our top picks</h2>
       </section>
       <Dishes/>
       <section className="border-solid border-4 pt-6 border-black  bg-orange-400 text-3xl text-center py-4 ">
