@@ -45,10 +45,10 @@ export default function InfiniteLooper({
     useEffect(() => setupInstances(), [setupInstances]);
   
     useEffect(() => {
-      window.addEventListener("resize", setupInstances);
+       if (typeof window !== 'undefined') {window.addEventListener("resize", setupInstances);}
   
       return () => {
-        window.removeEventListener("resize", setupInstances);
+        if (typeof window !== 'undefined') {window.removeEventListener("resize", setupInstances);}
       };
     }, [looperInstances, setupInstances]);
   
