@@ -45,14 +45,14 @@ export default function () {
 
     return (
 
-        <nav className={scrollTop > 100 ? "flex min-w-screen p-6 justify-center bg-orange-100/[.8] sticky top-0 z-20 border-b-4 border-solid border-orange-200 font-bold font-serif text-gray-700 shadow-md" : "flex min-w-screen p-6 justify-center bg-gray-950 font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
+        <nav className={scrollTop > 100 ? "flex min-w-screen p-12 justify-center bg-black/[.5] sticky top-0 z-20 border-b-4 border-solid border-orange-100 font-bold font-serif text-gray-700 shadow-md" : "flex min-w-screen p-12 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
             {/*desktop navigation*/}
-            <Image src="/logo.jpg" width={100} height={100} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10git'} />
+            <Image src="/logo.jpg" width={100} height={100} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10'} />
 
             {nav.display ?
 
                 <ul className="flex  h-4/5 w-3/5 justify-between uppercase" >
-                    <li> <Link href="/" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Home</Link> </li>
+                    <li> <Link href="/" className="hover:text-orange-200 border-double hover:border-t-2  p-4 border-orange-200 hover:pointer">Home</Link> </li>
                     <li><Link href="/menu" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Menu</Link> </li>
                     <li><Link href="/contact" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Contact Us</Link> </li>
                 </ul>

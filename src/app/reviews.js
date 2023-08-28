@@ -1,18 +1,21 @@
 'use client'
 import { useState } from "react"
-
+import "animate.css";
 
 export default function Reviews (){
     const reviews = [
         {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
         name:"Jane Austin",
-        stars:""},
+        stars:"",
+        key:1},
         {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
         name:"tony blair",
-        stars:""},
+        stars:"",
+    key:2},
         {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
         name:"oscar wild",
-        stars:""},
+        stars:"",
+    key:3},
     ]
 
     const [review, setReview] = useState(0)
@@ -41,7 +44,7 @@ return(
             <article onClick={()=>handleClickBack()} className="flex items-center hover:cursor-pointer text-9xl">
             &#8637;
             </article>
-            <article className="md:p-20 p-10">
+            <article key={reviews[review].key} className="md:p-20 p-10 animate__animated animate__fadeIn animate__slower">
                 <h3 className="text-2xl font-serif font-medium pb-10">&#34;{reviews[review].text}&#34;</h3>
                 <p className="text-right text-xl font-bold">{reviews[review].name}</p>
                 <p>{reviews[review].stars}</p>
