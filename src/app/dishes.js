@@ -45,17 +45,17 @@ const handleClickForward = () => {
 }
   
     return (
-      <section className="flex">
+      <section className="flex py-4">
      <section className="flex bg-gray-950 text-orange-100 justify-between w-full md:px-10 h-screen md:flex-row flex-col relative">
         
-        <section key={dishes[dish].key} className="md:h-full h-full w-screen relative rounded animate__animated animate__fadeIn animate__slower">
+        <section key={dishes[dish].key} className="h-full w-screen relative rounded animate__animated animate__fadeIn animate__slower">
                        
-        <figure className="absolute  inset-0">
+        <figure className="absolute p-4 inset-0">
           
           <Image src={dishes[dish].src} layout="fill" objectFit="cover" objectPosition="center" />
         </figure>
         
-        <figcaption className=" bg-black/[.7] z-10 md:h-1/2 h-1/4 w-1/3 left-1/3 rounded text-center font-serif absolute bottom-10">
+        <figcaption className=" bg-black/[.7] z-10 md:h-1/2 h-1/3 w-full md:w-1/3 md:left-1/3 rounded text-center font-serif absolute bottom-0 p-4 md:bottom-10">
         
           <h2 className="text-orange-50 font-bold md:text-3xl text-xl p-2 md:pb-8" >{dishes[dish].name}</h2>
           <p className="text-orange-100  md:mb-20">{dishes[dish].text}</p>

@@ -45,7 +45,7 @@ export default function () {
 
     return (
 
-        <nav className={scrollTop > 100 ? "flex min-w-screen p-12 justify-center bg-black/[.5] sticky top-0 z-20 border-b-4 border-solid border-orange-100 font-bold font-serif text-gray-700 shadow-md" : "flex min-w-screen p-12 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
+        <nav className={scrollTop > 100 ? "flex min-w-screen p-10 justify-center bg-black/[.5] sticky top-0 z-20 border-b-4 border-solid border-orange-100 font-bold font-serif text-orange-50 shadow-md" : "flex min-w-screen p-10 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
             {/*desktop navigation*/}
             <Image src="/logo.jpg" width={100} height={100} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10'} />
 
