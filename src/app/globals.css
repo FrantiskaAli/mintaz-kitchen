@@ -17,14 +17,16 @@
     }
   }
 
-  video {
+  #main-video {
     height: 100%;
-    width: 177.77777779vh; /* 100 * 16 / 9 */
+    width: 100vh; /* 100 * 16 / 9 */
     min-width: 100%;
     min-height: 56.25vw; /* 100 * 9 / 16 */
     object-fit: cover;
 }
-
+.reviews{
+  min-width: 110%;
+}
 .map-container {
   width: 50%;
   height: 400px;
@@ -77,8 +79,14 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
     width: 100%;
     height: 400px;
   }
+  .h-dishes{
+    height: 70vh;
+  }
 }
-
+/*dishes*/
+.h-dishes{
+  height: 80vh;
+}
 
 /* Looper styles */
 @keyframes slideAnim {
@@ -93,6 +101,7 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 .looper {
   width: 100%;
   overflow: hidden;
+  padding:10px;
  
 }
 
@@ -100,6 +109,7 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
   display: flex;
   justify-content: center;
   width: fit-content;
+  
 }
 
 .looper__innerList[data-animate="true"] .looper__listInstance {
@@ -110,22 +120,41 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
   display: flex;
   width: max-content;
   animation: none;
+  background-color: black;
 }
 
 
 .contentBlock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 120px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 16px;
-  padding:13px;
+
 }
 .contentBlock--one {  
-  width: 200px;  
-  font-weight: 600;
-  font-size: 18px; 
-  padding:1rem;
+  width: 250px;  
+
+}
+/*
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
+.video-dish{
+  object-fit: cover;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width:100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slick-slider.slick-initialized {
+  width: 100vw;
+}
+.slick-arrow.slick-prev {
+  background: black;
+}
+.slick-arrow.slick-next {
+  background: black;
 }

@@ -9,19 +9,19 @@ export default function MainPage() {
     };
 
 return ( 
-<article className="flex">
-<section className="overflow-hidden  w-screen h-screen relative shadow-2xl flex justify-center ">
-  <video autoPlay muted loop className="min-w-screen " ref={videoRef}
+<article className="flex ">
+<section className="overflow-hidden  w-screen h-96 md:h-screen relative shadow-2xl flex justify-center ">
+  <video id="main-video"
+  autoPlay muted loop ref={videoRef}
         onCanPlay={() => setPlayBack()}>
     <source src='/jumbotron.mp4' type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <figcaption className="absolute md:bottom-1/5 bottom-32 md:right-10 bg-orange-100/[.3] md:px-8 md:py-12  md:h4/5 w-full md:w-4/5 ">
+  <figcaption className="absolute md:bottom-1/5 bottom-32 md:right-10 bg-orange-100/[.3]  w-fit p-12 shadow-2xl">
     <article className="text-center">
-      <h1 className="text-gray-950 font-bold md:text-6xl text-4xl font-serif md:px-20 px-4 pt-10 pb-6">Savor the smoky delights</h1>
+      <h1 className="text-gray-950 font-bold md:text-6xl text-4xl font-serif">Savor the smoky delights</h1>
       
-      <p className="md:px-40 px-10 font-medium md:text-xl text-lg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium  accusantium doloremque laudantium </p>
     </article>
   </figcaption>
 </section>

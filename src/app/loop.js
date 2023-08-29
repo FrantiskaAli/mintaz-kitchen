@@ -64,23 +64,23 @@ export default function InfiniteLooper({
                 animationDirection: direction === "right" ? "reverse" : "normal",
               }}
             >
-               <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black">
-         <Image src="/grill1.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  />
+               <section className="contentBlock contentBlock--one relative border-4 border-solid border-black ">
+         <Image src="/grill1.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
         </section>
-        <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black">
-         <Image src="/Grill2.jpg"  layout="fill" objectFit="cover" objectPosition="center"  />
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
+         <Image src="/Grill2.jpg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
         </section>
-        <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black ">
-         <Image src="/Grill3.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  />
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black ">
+         <Image src="/Grill3.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
         </section>
-        <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black">
-         <Image src="/Grill4.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  />
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
+         <Image src="/Grill4.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
         </section>
-        <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black">
-         <Image src="/Grill5.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  />
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
+         <Image src="/Grill5.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  className="rounded"/>
         </section>
-        <section className="contentBlock contentBlock--one relative border-2 border-solid-border-black">
-         <Image src="/Grill6.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  />
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
+         <Image src="/Grill6.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
         </section>
             </section>
           ))}

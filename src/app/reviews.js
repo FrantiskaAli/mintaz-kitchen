@@ -1,57 +1,51 @@
 'use client'
-import { useState } from "react"
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "animate.css";
 
-export default function Reviews (){
-    const reviews = [
-        {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
-        name:"Jane Austin",
-        stars:"",
-        key:1},
-        {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
-        name:"tony blair",
-        stars:"",
-    key:2},
-        {text: "lorem ispum chipsum dipsum wht ncdjsibv chdbv csdbf cdsjkb cudsibbf jfb csdb  jkcsdui jcbd jbsd kjsd jksdbf ksjfb kjsc kdsjbfir jdbisff !!!",
-        name:"oscar wild",
-        stars:"",
-    key:3},
-    ]
+export default function Reviews() {
 
-    const [review, setReview] = useState(0)
-    const handleClickBack = ()=>{
-        let newRev = review
-        if (review > 0 )
-        {newRev = review - 1}
-        else if (review === 0){
-         newRev = 2 
-        }
-        setReview(newRev)
-    }
 
-    const handleClickForward = ()=>{
-        let newRev = review
-        if (review === 2 )
-        {newRev = 0}
-        else {
-         newRev = review + 1
-        }
-        setReview(newRev)
-    }
-    //setInterval(handleClickForward,10000)
-return(
-    <section className="flex md:flex-row flex-col justify-between  md:p-20 bg-orange-100 text-gray-950 ">
-            <article onClick={()=>handleClickBack()} className="flex items-center hover:cursor-pointer text-9xl">
-            &#8637;
-            </article>
-            <article key={reviews[review].key} className="md:p-20 p-10 animate__animated animate__fadeIn animate__slower">
-                <h3 className="text-2xl font-serif font-medium pb-10">&#34;{reviews[review].text}&#34;</h3>
-                <p className="text-right text-xl font-bold">{reviews[review].name}</p>
-                <p>{reviews[review].stars}</p>
-            </article>
-            <article onClick={()=>handleClickForward()} className="flex items-center hover:cursor-pointer text-9xl justify-end">
-            &#8640;
-            </article>
-    </section>
-)
+    var settings = {
+        className: "slider variable-width",
+        dots: false,
+        infinite: true,
+        speed: 750,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        accessibility: true,
+        autoplaySpeed: 3000,
+        autoplay: false,
+        focusOnSelect: true,
+        arrows: true
+
+    };
+
+
+    return (
+        <Slider {...settings}>
+
+            <section className="h-dishes flex justify-center content-center bg-orange-100  w-1/2 "  >
+                <article className="md:p-20  text-gray-900 text-center bg-orange-100 flex flex-col h-full justify-evenly">
+                    <h3 className="text-2xl font-serif font-medium">&#34;blblblb&#34;</h3>
+                    <p className="text-right text-xl font-bold">tom and jerry</p>
+                </article>
+            </section>
+            <section className="h-dishes flex justify-center content-center"  >
+                <article className="md:p-20  text-gray-900 text-center bg-orange-100 flex flex-col h-full justify-evenly">
+                    <h3 className="text-2xl font-serif font-medium">&#34;blbhfgggnvnvbnlblb&#34;</h3>
+                    <p className="text-right text-xl font-bold">tom and jerry</p>
+                </article>
+            </section>
+            <section className="h-dishes flex justify-center content-center"  >
+                <article className="md:p-20  text-gray-900 text-center bg-orange-100 flex flex-col h-full justify-evenly">
+                    <h3 className="text-2xl font-serif font-medium">&#34;blblblb sdihod djshof jsdhf jsdbd f dfjbsdf jfbsn df fjbdf sdkfbfe  dfbsf dfkjsdfisdf fsd ffoidsf&#34;</h3>
+                    <p className="text-right text-xl font-bold">tom and jerry</p>
+                </article>
+            </section>
+
+        </Slider>
+    )
 }
