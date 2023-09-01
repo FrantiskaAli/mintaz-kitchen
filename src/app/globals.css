@@ -85,7 +85,7 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 /*dishes*/
 .h-dishes{
-  height: 80vh;
+  height: 70vh;
 }
 
 /* Looper styles */
@@ -148,13 +148,15 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
   background-size: cover;
   overflow: hidden;
 }
-
-.slick-slider.slick-initialized {
-  width: 100vw;
+#shopPage{
+background-image:url("../../public/grill.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
-.slick-arrow.slick-prev {
-  background: black;
-}
-.slick-arrow.slick-next {
-  background: black;
+#shopPageStyle{
+  background: (-45deg, black 0%, #00000071 100%);;
+  background: -moz-linear-gradient(-45deg, black 0%, #00000071 100%);
+  background: -webkit-linear-gradient(-45deg, black 0%, #00000071 100%);
+  background: linear-gradient(-45deg, black 0%, #00000071 100%);
 }

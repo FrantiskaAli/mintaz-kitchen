@@ -53,7 +53,7 @@ export default function () {
 
                 <ul className="flex  h-4/5 w-3/5 justify-between uppercase" >
                     <li> <Link href="/" className="hover:text-orange-200 border-double hover:border-t-2  p-4 border-orange-200 hover:pointer">Home</Link> </li>
-                    <li><Link href="/menu" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Menu</Link> </li>
+                    <li><Link href="/shop" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Menu</Link> </li>
                     <li><Link href="/contact" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Contact Us</Link> </li>
                 </ul>
 
@@ -67,12 +67,12 @@ export default function () {
             {
                 nav.open ? <section className="h-screen justify-center flex absolute top-0 z-40 w-screen overflow-y-hidden bg-gray-500/[.7] " onClick={() => (toggleNav())}>
                     <article className="h-1/2 w-1/3 bg-gray-950 p-10 ">
-                        <section classNAme="w-8 h-8">
+                        <section className="w-8 h-8">
                             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" onClick={() => (toggleNav())} className="hover:cursor-pointer"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="gray" fillRule="evenodd" /></svg>
                         </section>
                         <ul className='flex flex-col justify-between w-full text-2xl h-full items-center p-6'>
                             <Link href="/" onClick={() => (toggleNav())}>Home</Link>
-                            <Link href="/menu" onClick={() => (toggleNav())}>Menu</Link>
+                            <Link href="/shop" onClick={() => (toggleNav())}>Menu</Link>
                             <Link href="/contact" onClick={() => (toggleNav())}>Contact Us</Link>
                         </ul>
                     </article>

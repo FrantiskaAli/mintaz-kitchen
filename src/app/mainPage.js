@@ -27,8 +27,3 @@ return (
 </section>
 
 </article>)}
-/*<article className="w-full p-2  bg-gray-950/[.7] flex justify-center " >
-<section className="w-2/3 overflow-hidden text-white  text-2xl">
-<p id="scroll-text">Just opened now | blah blah | blah blah</p>
-</section>
-</article>*/
