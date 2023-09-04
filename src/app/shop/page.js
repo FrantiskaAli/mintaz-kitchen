@@ -6,7 +6,7 @@ import ProductCard from "./productCard"
 export default function Menu(){
     return (
     <main id="shopPage" className="min-w-screen min-h-screen">
-        <article id="shopPageStyle" className="min-w-screen min-h-screen flex justify-center py-20">
+        <article id="shopPageStyle" className="min-w-screen min-h-screen flex flex-col justify-center py-20 md:flex-row">
             {products.map((product)=> <ProductCard
             name={product.name}
             description={product.description}

@@ -14,7 +14,7 @@ export default function Footer() {
                 <p className="font-serif ">address 12<br /> address <br /> address</p>
             </section>
             <section>
-                <Image src="/logo.jpg" width={100} height={100} />
+                <Image src="/logo.jpg" width={100} height={100} alt="logo, grill with Mintaz Kitchen writing under"  />
             </section>
         </footer>)
 }

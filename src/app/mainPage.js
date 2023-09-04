@@ -9,8 +9,8 @@ export default function MainPage() {
     };
 
 return ( 
-<article className="flex ">
-<section className="overflow-hidden  w-screen h-96 md:h-screen relative shadow-2xl flex justify-center ">
+<article>
+<section className="overflow-hidden  w-screen h-96 md:h-screen relative shadow-2xl flex justify-center">
   <video id="main-video"
   autoPlay muted loop ref={videoRef}
         onCanPlay={() => setPlayBack()}>

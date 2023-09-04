@@ -43,17 +43,21 @@ export default function () {
         nav.open ? setNav({ ...nav, open: false }) : setNav({ ...nav, open: true })
     };
 
+    //adjusting logos width
+    const [logoWidth,setLogoWidth]=useState(80)
+    useEffect(()=>{width  > 700 ? setLogoWidth (100) : setLogoWidth(80)},[width])
     return (
 
         <nav className={scrollTop > 100 ? "flex min-w-screen p-10 justify-center bg-black/[.5] sticky top-0 z-20 border-b-4 border-solid border-orange-100 font-bold font-serif text-orange-50 shadow-md" : " flex min-w-screen p-10 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
             {/*desktop navigation*/}
-            <Image src="/logo.jpg" width={width < 600 ? 80 : 100} height={width < 600 ? 80 : 100} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10'} />
-
+         
+            <Image src="/logo.jpg" alt="logo, grill with Mintaz Kitchen writing under" width={logoWidth} height={logoWidth} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10'} />
+  
             {nav.display ?
 
                 <ul className="flex  h-4/5 w-3/5 justify-between uppercase" >
                     <li> <Link href="/" className="hover:text-orange-200 border-double hover:border-t-2  p-4 border-orange-200 hover:pointer">Home</Link> </li>
-                    <li><Link href="/shop" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Menu</Link> </li>
+                    <li><Link href="/shop" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Shop</Link> </li>
                     <li><Link href="/contact" className="hover:text-orange-200 border-double hover:border-t-2 p-4 border-orange-200 hover:pointer">Contact Us</Link> </li>
                 </ul>
 
@@ -72,7 +76,7 @@ export default function () {
                         </section>
                         <ul className='flex flex-col justify-between w-full text-2xl h-full items-center p-6'>
                             <Link href="/" onClick={() => (toggleNav())}>Home</Link>
-                            <Link href="/shop" onClick={() => (toggleNav())}>Menu</Link>
+                            <Link href="/shop" onClick={() => (toggleNav())}>Shop</Link>
                             <Link href="/contact" onClick={() => (toggleNav())}>Contact Us</Link>
                         </ul>
                     </article>

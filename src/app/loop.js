@@ -53,7 +53,7 @@ export default function InfiniteLooper({
     }, [looperInstances, setupInstances]);
   
     return (
-      <section className="looper" ref={outerRef}>
+      <section className="looper lg:py-10" ref={outerRef}>
         <article className="looper__innerList" ref={innerRef} data-animate="true">
           {[...Array(looperInstances)].map((_, ind) => (
             <section
@@ -65,22 +65,22 @@ export default function InfiniteLooper({
               }}
             >
                <section className="contentBlock contentBlock--one relative border-4 border-solid border-black ">
-         <Image src="/grill1.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
+         <Image src="/grill1.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" alt="grilled chicken tights"/>
         </section>
         <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
-         <Image src="/Grill2.jpg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
-        </section>
-        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black ">
-         <Image src="/Grill3.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
+         <Image src="/Grill2.jpg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" alt="grilled ribs" />
         </section>
         <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
-         <Image src="/Grill4.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
+         <Image src="/Grill3.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" alt="burgers pn grill"/>
         </section>
         <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
-         <Image src="/Grill5.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  className="rounded"/>
+         <Image src="/Grill4.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" alt="cutting crunchy crust beef ham"/>
         </section>
         <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
-         <Image src="/Grill6.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" />
+         <Image src="/Grill5.jpeg"  layout="fill" objectFit="cover" objectPosition="center"  className="rounded" alt="grilled lamb chops"/>
+        </section>
+        <section className="contentBlock contentBlock--one relative border-4 border-solid border-black">
+         <Image src="/Grill6.jpeg"  layout="fill" objectFit="cover" objectPosition="center" className="rounded" alt="grilled chicken steak"/>
         </section>
             </section>
           ))}

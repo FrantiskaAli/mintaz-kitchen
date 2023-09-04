@@ -8,7 +8,7 @@ import "animate.css";
 // Custom previous arrow button
 const PrevArrow = (props) => (
     <button
-      className="text-6xl font-bold text-orange-50 z-50 w-full"
+    className="text-6xl font-bold text-orange-50 z-50 w-full md:w-fit md:absolute md:right-10 md:top-1/3 md:text-black"
       onClick={props.onClick}
     >
      &#8594;
@@ -18,7 +18,7 @@ const PrevArrow = (props) => (
   // Custom next arrow button
   const NextArrow = (props) => (
     <button
-      className="text-6xl font-bold text-orange-50 z-50 w-full"
+      className="text-6xl font-bold text-orange-50 z-50 w-full md:w-fit md:absolute md:left-10 md:top-1/3 md:text-black"
       onClick={props.onClick}
     >
       &#8592;

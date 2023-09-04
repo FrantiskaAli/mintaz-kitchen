@@ -2,10 +2,10 @@
 import Image from "next/image"
 
 
-export default function ProductCard({name, description,price, recommend,image ,key}){
+export default function ProductCard({name, description,price, recommend,image ,keyCode}){
 
 return (
-    <section key={key} className="bg-black/[.7] text-orange-50 h-fit p-20">
+    <section key={keyCode} className="bg-black/[.7] text-orange-50 h-fit p-20">
         <article className="">
         <h2 className="text-4xl bold font-serif text-orange-200">{name}</h2>
         <p className="text-lg px-10 ">{description}</p>
