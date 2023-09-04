@@ -160,8 +160,10 @@ background-size: cover;
   background: -webkit-linear-gradient(-45deg, black 0%, #00000071 100%);
   background: linear-gradient(-45deg, black 0%, #00000071 100%);
 }
-
-.light-shadow{
-  -webkit-box-shadow: 1px 4px 54px 28px rgba(255,233,192,0.45); 
-  box-shadow: 1px 4px 54px 28px rgba(255,233,192,0.45);
+@media screen and (min-width: 900px) {
+  .light-shadow{
+    -webkit-box-shadow: 1px 4px 54px 28px rgba(255,233,192,0.45); 
+    box-shadow: 1px 4px 54px 28px rgba(255,233,192,0.45);
+  }
+  
 }
