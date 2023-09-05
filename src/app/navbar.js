@@ -48,10 +48,10 @@ export default function () {
     useEffect(()=>{width  > 700 ? setLogoWidth (100) : setLogoWidth(80)},[width])
     return (
 
-        <nav className={scrollTop > 100 ? "flex min-w-screen p-10 justify-center bg-black/[.5] sticky top-0 z-20 border-b-4 border-solid border-orange-100 font-bold font-serif text-orange-50 shadow-md" : " flex min-w-screen p-10 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
+        <nav className={scrollTop > 100 ? "flex min-w-screen p-10 justify-center bg-black/[.5] sticky top-0 z-40 border-b-4 border-solid border-orange-100 font-bold font-serif text-orange-50 shadow-md" : " flex min-w-screen p-10 justify-center bg-black font-bold font-serif text-orange-100 z-40 sticky top-0 border-b-4 border-double border-orange-200 "} >
             {/*desktop navigation*/}
          
-            <Image src="/logo.jpg" alt="logo, grill with Mintaz Kitchen writing under" width={logoWidth} height={logoWidth} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950' : 'absolute top-6 left-10'} />
+            <Image src="/logo.jpg" alt="logo, grill with Mintaz Kitchen writing under" width={logoWidth} height={logoWidth} className={scrollTop > 100 ? 'absolute top-6 left-10 ring-2 ring-gray-950 ' : 'absolute top-6 left-10'} />
   
             {nav.display ?
 
@@ -64,7 +64,7 @@ export default function () {
                 :
 
                 <article className="flex justify-center pl-6 flex-shrink-0 ">
-                    <svg width="70" height="20" xmlns="http://www.w3.org/2000/svg" className="hover:cursor-pointer hover:brightness-50 absolute left-1/2"
+                    <svg width="40" height="20" xmlns="http://www.w3.org/2000/svg" className="hover:cursor-pointer hover:brightness-50 absolute left-1/2"
                         onClick={() => (toggleNav())}><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#FFE0B2" fillRule="evenodd" /></svg>
                 </article>
             }
@@ -72,7 +72,7 @@ export default function () {
                 nav.open ? <section className="h-screen justify-center flex absolute top-0 z-40 w-screen overflow-y-hidden bg-gray-500/[.7] " onClick={() => (toggleNav())}>
                     <article className="h-1/2 w-1/3 bg-gray-950 p-10 ">
                         <section className="w-8 h-8">
-                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" onClick={() => (toggleNav())} className="hover:cursor-pointer"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="gray" fillRule="evenodd" /></svg>
+                            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 40 40' onClick={() => (toggleNav())} className="hover:cursor-pointer"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="gray" fillRule="inherit" /></svg>
                         </section>
                         <ul className='flex flex-col justify-between w-full text-2xl h-full items-center p-6'>
                             <Link href="/" onClick={() => (toggleNav())}>Home</Link>

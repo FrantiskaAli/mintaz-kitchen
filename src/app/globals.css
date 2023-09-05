@@ -155,10 +155,7 @@ background-position: center;
 background-size: cover;
 }
 #shopPageStyle{
-  background: (-45deg, black 0%, #00000071 100%);;
-  background: -moz-linear-gradient(-45deg, black 0%, #00000071 100%);
-  background: -webkit-linear-gradient(-45deg, black 0%, #00000071 100%);
-  background: linear-gradient(-45deg, black 0%, #00000071 100%);
+  background-color: rgba(0, 0, 0, 0.364);
 }
 @media screen and (min-width: 900px) {
   .light-shadow{
@@ -166,4 +163,8 @@ background-size: cover;
     box-shadow: 1px 4px 54px 28px rgba(255,233,192,0.45);
   }
   
+}
+.light-shadowShop{
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255,224,149,0.30); 
+  box-shadow: 5px 5px 15px 5px rgba(255,224,149,0.30);
 }
