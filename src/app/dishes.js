@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image"
 import Link from 'next/link';
 import 'animate.css'
-import { useState,useEffect,useRef } from "react";
+import { useState,useEffect } from "react";
 
 
 export default function Dishes() {
@@ -24,10 +24,10 @@ export default function Dishes() {
           window.removeEventListener('resize', handleResize);
       };
   }, []);
-useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
+useEffect(()=> {width  > 900 ? setSlides(1) : setSlides(1)}, [width])
 
 //stopping videos
-const [currentSlide, setCurrentSlide] = useState(0);
+
 
   var settings =  {
     dots: false,
@@ -41,41 +41,28 @@ const [currentSlide, setCurrentSlide] = useState(0);
     centerMode: true,
     focusOnSelect: true,
     arrows: false,
-    beforeChange: (oldIndex, newIndex) => {
-      if (currentSlide !== newIndex) {
-        // Pause the video when the slide changes
-        const video = videoRefs[newIndex].current;
-        if (video) {
-          video.pause();
-        }
-      }
-    },
-    afterChange: (index) => {
-      // Play the video when the slide is centered
-      const video = videoRefs[index].current;
-      if (video) {
-        video.play();
-        setCurrentSlide(index);
-      }
-    },
+    autoPlay:true,
+    speed: 1000,
+
   };
-  const videoRefs = Array(3).fill(null).map(() => useRef(null)); 
+
+
 
   return (
-    <article>
+    <article className="flex flex-col">
       <section className="flex w-full p-12 text-orange-100 border-y-4 border-solid border-orange-100/[.6] justify-center">
     <h2 className=" md:text-5xl text-3xl font-serif font-bold">Our top picks</h2>
   </section>
   {
     
-    <Slider {...settings} className="h-dishes"  >
+    <Slider {...settings} className="h-dishes lg:w-2/3 lg:self-center lg:border-2 lg:border-solid lg:border-orange-50" >
 
 
 <section className="relative">
 
 <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-  <video muted loop className="video-dish"  ref={videoRefs[0]} >
+  <video autoPlay muted loop className="video-dish" >
     <source src='/video4.mp4' type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -95,7 +82,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
         <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-          <video muted loop className="video-dish"  ref={videoRefs[1]}>
+          <video autoPlay muted loop className="video-dish" >
             <source src='/video2.mp4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -115,7 +102,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
         <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-          <video muted loop className="video-dish"  ref={videoRefs[2]}>
+          <video autoPlay  muted loop className="video-dish" >
             <source src='/video3.mp4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>

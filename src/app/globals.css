@@ -87,7 +87,16 @@ filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 .h-dishes{
   height: 70vh;
 }
+.slick-center {
 
+}
+.slick-slide:not(.slick-center) {
+  /* Add your styles for the other slides here */
+
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  /* Example border for non-centered slides */
+}
 /* Looper styles */
 @keyframes slideAnim {
   from {
