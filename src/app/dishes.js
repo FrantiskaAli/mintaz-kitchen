@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image"
 import Link from 'next/link';
 import 'animate.css'
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef } from "react";
 
 
 export default function Dishes() {
@@ -25,7 +25,10 @@ export default function Dishes() {
       };
   }, []);
 useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
-  
+
+//stopping videos
+const [currentSlide, setCurrentSlide] = useState(0);
+
   var settings =  {
     dots: false,
     infinite: true,
@@ -37,10 +40,26 @@ useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
     autoplay: false,
     centerMode: true,
     focusOnSelect: true,
-    arrows: false
-
-  } 
-
+    arrows: false,
+    beforeChange: (oldIndex, newIndex) => {
+      if (currentSlide !== newIndex) {
+        // Pause the video when the slide changes
+        const video = videoRefs[newIndex].current;
+        if (video) {
+          video.pause();
+        }
+      }
+    },
+    afterChange: (index) => {
+      // Play the video when the slide is centered
+      const video = videoRefs[index].current;
+      if (video) {
+        video.play();
+        setCurrentSlide(index);
+      }
+    },
+  };
+  const videoRefs = Array(3).fill(null).map(() => useRef(null)); 
 
   return (
     <article>
@@ -49,14 +68,14 @@ useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
   </section>
   {
     
-    <Slider {...settings} className="h-dishes" >
+    <Slider {...settings} className="h-dishes"  >
 
 
 <section className="relative">
 
 <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-  <video autoPlay muted loop className="video-dish" >
+  <video muted loop className="video-dish"  ref={videoRefs[0]} >
     <source src='/video4.mp4' type="video/mp4" />
     Your browser does not support the video tag.
   </video>
@@ -76,7 +95,7 @@ useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
 
         <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-          <video autoPlay muted loop className="video-dish" >
+          <video muted loop className="video-dish"  ref={videoRefs[1]}>
             <source src='/video2.mp4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -96,7 +115,7 @@ useEffect(()=> {width  > 900 ? setSlides(2) : setSlides(1)}, [width])
 
         <figure className="p-4 inset-0 h-dishes content-center justify-center h-full flex" >
 
-          <video autoPlay muted loop className="video-dish" >
+          <video muted loop className="video-dish"  ref={videoRefs[2]}>
             <source src='/video3.mp4' type="video/mp4" />
             Your browser does not support the video tag.
           </video>

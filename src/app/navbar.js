@@ -70,7 +70,7 @@ export default function () {
             }
             {
                 nav.open ? <section className="h-screen justify-center flex absolute top-0 z-40 w-screen overflow-y-hidden bg-gray-500/[.7] " onClick={() => (toggleNav())}>
-                    <article className="h-1/2 w-1/3 bg-gray-950 p-10 ">
+                    <article className="h-1/2 w-1/2 bg-gray-950 p-10 ">
                         <section className="w-8 h-8">
                             <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox='0 0 40 40' onClick={() => (toggleNav())} className="hover:cursor-pointer"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="gray" fillRule="inherit" /></svg>
                         </section>
